@@ -1,0 +1,49 @@
+P->int main ( ) { STL }
+STL->ST STL'
+STL'->landa
+STL'->ST STL'
+ST->DCL
+ST->AST
+ST->IFST
+ST->WST
+ST->DWST
+ST->FST
+DCL->TY id DCL'
+DCL'->;
+DCL'->, id DCL'
+TY->float
+TY->int
+TY->char
+TY->bool
+AST->id = E AST'
+AST'->;
+AST'->< E ;
+AST'-><= E ;
+AST'->= E ;
+AST'->E ;
+AST'->== E ;
+FST->for ( FAST ; BE ; IDST ) { STL }
+FAST->id = E
+IDST->id IDST'
+IDST'->--
+IDST'->++
+IFST->if ( BE ) { STL }
+WST->while ( BE ) { STL }
+DWST->do { STL } while ( BE ) ;
+E->T E'
+E'->+ T E'
+E'->landa
+T->F T'
+T'->* F T'
+T'->landa
+F->( E )
+F->id
+F->number
+BE->BT BE'
+BE'->|| BT BE'
+BE'->landa
+BT->BF BT'
+BT'->&& BF BT'
+BT'->landa
+BF->( BE )
+BF->id
